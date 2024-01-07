@@ -1,0 +1,24 @@
+test: (g=0): rw=randrw, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=64
+fio-3.28
+Starting 1 process
+
+test: (groupid=0, jobs=1): err= 0: pid=118667: Sun Jan  7 14:40:07 2024
+  read: IOPS=240k, BW=937MiB/s (983MB/s)(768MiB/819msec)
+   bw (  KiB/s): min=1009944, max=1009944, per=100.00%, avg=1009944.00, stdev= 0.00, samples=1
+   iops        : min=252486, max=252486, avg=252486.00, stdev= 0.00, samples=1
+  write: IOPS=80.2k, BW=313MiB/s (328MB/s)(256MiB/819msec); 0 zone resets
+   bw (  KiB/s): min=336112, max=336112, per=100.00%, avg=336112.00, stdev= 0.00, samples=1
+   iops        : min=84028, max=84028, avg=84028.00, stdev= 0.00, samples=1
+  cpu          : usr=21.76%, sys=65.89%, ctx=43156, majf=0, minf=7
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=196498,65646,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=937MiB/s (983MB/s), 937MiB/s-937MiB/s (983MB/s-983MB/s), io=768MiB (805MB), run=819-819msec
+  WRITE: bw=313MiB/s (328MB/s), 313MiB/s-313MiB/s (328MB/s-328MB/s), io=256MiB (269MB), run=819-819msec
+
+Disk stats (read/write):
+  nvme0n1: ios=162541/54160, merge=0/36, ticks=15003/568, in_queue=15573, util=88.89%
